@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hello App Engine</title>
+    <script src="jquery-3.2.1.min.js"></script>
+
+  </head>
+	    <script>
+		var task;
+ 		$( function() {
+ 			$('#send').click( function() {
+ 				task = 1;
+ 				var tourname = $('#tourname').val();
+ 				var tourage = $('#tourage').val();
+ 				var tourzagran = $('#tourzagran').val();
+ 				var tourdengi = $('#tourdengi').val();
+ 				var tranname = $('#tranname').val();
+ 				var maxras = $('#maxras').val();
+ 				var trandengi = $('#trandengi').val();
+ 				var gorodname = $('#gorodname').val();
+ 				var strana = $('#strana').val();
+ 				var gorodras = $('#gorodras').val();
+				$('#result').load( "/domashnee_zadanie_5_2?tourname="+tourname+"&tourage="+tourage+"&tourzagran="+tourzagran+"&tourdengi="+tourdengi+"&tranname="+tranname+"&maxras="+maxras+"&trandengi="+trandengi+"&gorodname="+gorodname+"&strana="+strana+"&gorodras="+gorodras);
+ 			} );
+		 } );
+ 		</script>
+  <body>
+    <h1>Домашнее задание 5, пункт 2</h1>
+    <h2>Турист: </h2>
+    <form>
+    <p>Имя:</p>
+    <input id="tourname" type="text" />
+    <p>Возраст:</p>
+    <input id="tourage" type="text" />
+    <p>Есть ли загранпаспорт:</p>
+    <input id="tourzagran" type="text" />
+    <p>Сколько денег на путешествие:</p>
+    <input id="tourdengi" type="text" />
+    </form>
+    <h2>Транспорт: </h2>
+    <form>
+    <p>Название:</p>
+    <input id="tranname" type="text" />
+    <p>Максимальное расстояние:</p>
+    <input id="maxras" type="text" />
+    <p>Сколько стоит:</p>
+    <input id="trandengi" type="text" />
+    </form>
+    <h2>Город: </h2>
+    <form>
+    <p>Название:</p>
+    <input id="gorodname" type="text" />
+    <p>Страна:</p>
+    <input id="strana" type="text" />
+    <p>Расстояние:</p>
+    <input id="gorodras" type="text" />
+    </form>    
+	<button id="send">Отправить</button>
+	<p>Результат: <b><span id="result"></span></b></p>
+  </body>
+</html>
